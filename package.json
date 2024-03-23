@@ -1,13 +1,13 @@
 {
-  "name": "@cloud-cli/",
+  "name": "@cloud-cli/db-sqlite",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "test": "jest",
-    "tdd": "jest --watchAll"
+    "test": "npx vitest --run",
+    "tdd": "npx vitest"
   },
   "prettier": "@cloud-cli/prettier-config",
   "repository": {
@@ -19,7 +19,12 @@
   },
   "devDependencies": {
     "@cloud-cli/prettier-config": "^1.0.0",
-    "@cloud-cli/jest-config": "^1.0.0",
-    "@cloud-cli/typescript-config": "^1.0.0"
+    "@cloud-cli/typescript-config": "^1.0.0",
+    "@types/better-sqlite3": "^7.6.9",
+    "@types/node": "^20.11.28",
+    "vitest": "^1.3.1"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.3"
   }
 }
